@@ -38,7 +38,18 @@ El proyecto aplica los siguientes principios:
 ---
 ## 📤 Entradas y procesos de salida
 
------------------------entrevista---
+**Entradas:**
+* Salario
+* Horas extras
+* Bonificaciones
+* Comisiones
+* Auxilios
+* Salud (porcentaje)
+* Pension (porcentaje
+* Impuestos (porcentaje)
+
+**Salidas:**
+* Salario Neto
 
 ---
 
