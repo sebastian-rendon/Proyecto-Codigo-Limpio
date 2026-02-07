@@ -1,4 +1,4 @@
-# Proyecto: Codigo Limpio - Liquidador de Nómina
+# Liquidador de Nómina
 
 ## 📌 Descripción
 
@@ -26,14 +26,12 @@ Desarrollar una aplicación clara, funcional y bien estructurada que aplique los
 
 ---
 
-## 🧠 Enfoque de Código Limpio
+## Entrevista
 
-El proyecto aplica los siguientes principios:
+Esta entrevista fue realizada a un desarrollador para realizar un intercambio de ideas acerca del proyecto y los casos de prueba necesarios.
 
-* Nombres claros y significativos
-* Métodos pequeños y con una sola responsabilidad
-* Estructura clara y coherente
-* Facilidad para realizar pruebas y cambios
+🎧 Audio:
+
 
 ---
 ## 📤 Entradas y procesos de salida
@@ -47,6 +45,10 @@ El proyecto aplica los siguientes principios:
 * Salud (porcentaje)
 * Pension (porcentaje
 * Impuestos (porcentaje)
+
+**Proceso:**
+
+Durante el proceso operativo se realiza la suma del salario con los beneficios extra (Valores devengados) que incluyen **horas extra**, **Bonificaciones**, **Comisiones**, **Auxilios** y se le restan las deducciones de ley siendo estas **Salud**, **Pension**, **Impuestos** (a estas ultimas en caso de que apliquen). 
 
 **Salidas:**
 * Salario Neto
