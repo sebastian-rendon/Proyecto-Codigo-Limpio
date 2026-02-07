@@ -28,9 +28,9 @@ Desarrollar una aplicación clara, funcional y bien estructurada que aplique los
 
 ## Entrevista
 
-Esta entrevista fue realizada a un desarrollador para realizar un intercambio de ideas acerca del proyecto y los casos de prueba necesarios.
+Este repositorio incluye una entrevista relacionada con el proyecto a un intercambio de ideas del proyecto.
 
-🎧 Audio:
+📁 La entrevista completa se encuentra en la carpeta `entrevista`.
 
 
 ---
