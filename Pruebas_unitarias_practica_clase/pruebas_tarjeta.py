@@ -24,16 +24,16 @@ def probar_caso_normal_1():
 
 def probar_caso_normal_2():
     #definir datos de entrada
-    compra = 500_000
+    compra = 850_000
     #La cuota de interés se expresa en porcentaje, por lo que se debe dividir entre 100 para obtener el valor decimal
-    interes = 2.5 / 100
+    interes = 3.4 / 100
     plazo = 24
 
     #Realizar el proceso
     cuota_calculada = logica_tarjeta.calcular_cuota(compra, interes, plazo)
 
     #Verificar las salidas
-    cuota_esperada = 21_325.25
+    cuota_esperada = 52377.50
 
     if(round(cuota_calculada, 2) == round(cuota_esperada,2)):
         print("La prueba fue exitosa")
