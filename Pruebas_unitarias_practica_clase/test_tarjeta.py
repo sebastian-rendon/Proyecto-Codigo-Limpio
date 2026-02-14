@@ -19,7 +19,10 @@ class TestCalculoCuotaTarjeta( unittest.TestCase):
         #verificar la salida
         self.assertAlmostEqual(cuota_calculada, cuota_esperada, 2)
 
-
+    #Otras pruebas
+    # .
+    # .
+    # .
 
 if __name__ == '__main__':
     unittest.main()
