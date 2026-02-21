@@ -1,7 +1,13 @@
 import logica_liquidador
 
 try:
-    salario = float(input("Ingrese el valor del salario mensual: "))
+    entrada_salario = input("Ingrese el valor del salario mensual: ")
+
+    if entrada_salario == "":
+        raise ValueError("ERROR, El salario es obligatorio")
+
+    salario = float(entrada_salario)
+
     horas_extra = float(input("Ingrese el valor de las horas extra: "))
     bonificaciones = float(input("Ingrese el valor de las bonificaciones: "))
     comisiones = float(input("Ingrese el valor de las comisiones: "))
