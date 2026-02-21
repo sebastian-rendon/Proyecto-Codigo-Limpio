@@ -2,20 +2,39 @@ import logica_liquidador
 
 try:
     entrada_salario = input("Ingrese el valor del salario mensual: ")
+    entrada_horas_extra = input("Ingrese el valor de las horas extra: ")
+    entrada_bonificaciones = input("Ingrese el valor de las bonificaciones: ")
+    entrada_comisiones = input("Ingrese el valor de las comisiones: ")
+    entrada_auxilios = input("Ingrese el valor de los auxilios: ")
 
-    if entrada_salario == "":
-        raise ValueError("ERROR, El salario es obligatorio")
+    entrada_salud = input("Ingrese el porcentaje de la salud que usted paga (en decimal): ")
+    entrada_pension = input("Ingrese el porcentaje de la pensión que usted paga (en decimal): ")
+    entrada_impuesto_dinero = input("Ingrese el valor de los impuestos que usted paga: ")
+
+    campos = [
+        entrada_salario,
+        entrada_horas_extra,
+        entrada_bonificaciones,
+        entrada_comisiones,
+        entrada_auxilios,
+        entrada_salud,
+        entrada_pension,
+        entrada_impuesto_dinero
+    ]
+
+    
+    if any(campo == "" for campo in campos):
+        raise ValueError("ERROR, Hay campos obligatorios vacíos")
 
     salario = float(entrada_salario)
+    horas_extra = float(entrada_horas_extra)
+    bonificaciones = float(entrada_bonificaciones)
+    comisiones = float(entrada_comisiones)
+    auxilios = float(entrada_auxilios)
 
-    horas_extra = float(input("Ingrese el valor de las horas extra: "))
-    bonificaciones = float(input("Ingrese el valor de las bonificaciones: "))
-    comisiones = float(input("Ingrese el valor de las comisiones: "))
-    auxilios = float(input("Ingrese el valor de los auxilios: "))
-
-    salud = float(input("Ingrese el valor de la salud que usted paga (en decimal): "))
-    pension = float(input("Ingrese el valor de la pension que usted paga (en decimal): "))
-    impuesto_dinero = float(input("Ingrese el valor de los impuestos que usted paga: "))
+    salud = float(entrada_salud)
+    pension = float(entrada_pension)
+    impuesto_dinero = float(entrada_impuesto_dinero)
 
     salario_neto = logica_liquidador.calcular_salario(
         salario,
