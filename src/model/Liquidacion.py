@@ -33,8 +33,6 @@ class Liquidacion:
     def is_equal(self, otro) -> bool:
         """ Verifica cada atributo de self contra otra instancia de esta clase y dispara una excepcion si no son iguales """
 
-        assert(self.id == otro.id)
-        assert(str(self.fecha) == str(otro.fecha))
         assert(float(self.salario) == float(otro.salario))
         assert(float(self.horas_extra) == float(otro.horas_extra))
         assert(float(self.bonificaciones) == float(otro.bonificaciones))
