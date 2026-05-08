@@ -31,8 +31,6 @@ VALUES ({liquidacion.id},{liquidacion.salario},{liquidacion.horas_extra},{liquid
     
     def insertar(liquidacion: Liquidacion):
         pass
-
+        
     def buscar_liquidacion(id: int) -> Liquidacion:
         pass
-
-        
