@@ -1,3 +1,25 @@
-__pycache__
-dist
-build
+# Entornos virtuales
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# SQLite
+*.db
+*.sqlite3
+
+# Buildozer / Android
+.bin/
+build/
+.gradle/
+
+# Logs
+*.log
+
+# Variables de entorno
+.env
