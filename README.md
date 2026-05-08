@@ -3,8 +3,10 @@
 
 ## Autores
 
-* **Luis Alejandro Correa Arrieta**
-* **Juan Felipe Santiago Pinzon**
+* **Luis Alejandro Correa Arrieta** (Interfaz gráfica)
+* **Juan Felipe Santiago Pinzon** (Interfaz gráfica)
+* **Juan Camilo Gomez** (dueño)
+* **Sebastian Rendon** (dueño)
 
 ---
 
@@ -126,7 +128,7 @@ Nómina neta = (Salario + Horas extra + Bonificaciones + Comisiones + Auxilios)
 
 ## Entrevista
 
-Este repositorio incluye una entrevista relacionado al proyecto a un invitado con mayor conocimiento, es un intercambio de ideas antes de la construcción del mismo.
+Este repositorio incluye una entrevista relacionado al proyecto a un invitado con mas experiencia, es un intercambio de ideas antes de la construcción del mismo para aclarar dudas y generar nuevas ideas de construcción.
 
 📁 La entrevista completa se encuentra en `docs/Entrevista.m4a`.
 
@@ -152,10 +154,6 @@ Curso: **Código Limpio**
 
 
 # Liquidador de Nómina
-
-## Autor
-
-* **Luis Alejandro Correa Arrieta**
 
 ---
 
