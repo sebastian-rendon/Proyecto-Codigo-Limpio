@@ -16,21 +16,26 @@ class LiquidacionesController:
             port=5432
         )
         cursor = connection.cursor()
-
-        #Armar instruccion sql
-        sql = f""" INSERT INTO liquidaciones (fecha,salario,horas_extra,bonificaciones,comisiones,auxilios,porcentaje_salud,porcentaje_pension,impuestos,
-total_devengado,salario_neto) 
-VALUES ({liquidacion.id},{liquidacion.salario},{liquidacion.horas_extra},{liquidacion.bonificaciones},{liquidacion.comisiones},{liquidacion.auxilios},{liquidacion.porcentaje_salud},{liquidacion.porcentaje_pension},{liquidacion.impuestos},{liquidacion.total_devengado},{liquidacion.salario_neto}); """
-
-        #ejecutar sql
-        cursor.execute(sql)
-
-        #invocar commit para guardar los cambios en la BD
-        connection.commit()
         return cursor
-    
+
     def insertar(liquidacion: Liquidacion):
-        pass
-        
+        cursor = LiquidacionesController.obtener_cursor()
+        consulta = f"""INSERT INTO liquidaciones (fecha, salario, horas_extra, bonificaciones,
+            comisiones, auxilios, porcentaje_salud, porcentaje_pension, impuestos,
+            total_devengado, salario_neto)
+            VALUES (NOW(), {liquidacion.salario}, {liquidacion.horas_extra},
+            {liquidacion.bonificaciones}, {liquidacion.comisiones}, {liquidacion.auxilios},
+            {liquidacion.porcentaje_salud}, {liquidacion.porcentaje_pension},
+            {liquidacion.impuestos}, {liquidacion.total_devengado}, {liquidacion.salario_neto})
+            RETURNING id"""
+        cursor.execute(consulta)
+        liquidacion.id = cursor.fetchone()[0]
+        #commit para guardar los cambios en la BD
+        cursor.connection.commit()
+
+
+
     def buscar_liquidacion(id: int) -> Liquidacion:
         pass
+
+    
