@@ -3,17 +3,20 @@ sys.path.append(".")
 sys.path.append("src")
 import psycopg2
 from model.liquidacion import Liquidacion
+import secret_config
+
 
 class LiquidacionesController:
 
     def obtener_cursor():
         """ Crea un objeto cursor para poder ejecutar SQL en la BD """
+
         connection = psycopg2.connect(
-            database='liquidador_nomina_67mk',
-            user='liquidador_nomina_67mk_user',
-            password='lVWtEYZko9Bxa2b5Tc3igH9aQwb0Fs5P',
-            host='dpg-d7v2tu9kh4rs739nbe8g-a.virginia-postgres.render.com',
-            port=5432
+            database=secret_config.PGDATABASE,
+            user=secret_config.PGUSER,
+            password=secret_config.PGPASSWORD,
+            host=secret_config.PGHOST,
+            port=secret_config.PGPORT
         )
         cursor = connection.cursor()
         return cursor

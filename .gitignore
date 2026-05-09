@@ -23,3 +23,5 @@ build/
 
 # Variables de entorno
 .env
+
+secret_config.py
