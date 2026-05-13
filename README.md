@@ -87,7 +87,7 @@ PGPORT=5432
 
 ⚠️ Nunca suba `secret_config.py` al repositorio.
 ---
-### Ejecución del programa
+### Ejecución del programa con base de datos
  
 Ubicados en la carpeta raíz del proyecto, ejecute:
  
