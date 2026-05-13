@@ -1,5 +1,7 @@
 import sys
-sys.path.append(".")
+
+from model import liquidacion
+sys.path.append(".")    
 sys.path.append("src")
 import psycopg2
 from model.liquidacion import Liquidacion
@@ -56,6 +58,25 @@ class LiquidacionesController:
             porcentaje_pension=fila[8],
             impuestos=fila[9],
             total_devengado=fila[10],
+            salario_neto=fila[11]
+        )
+        return liquidacion
+    
+    def buscar_liquidacion(id: int) -> Liquidacion:
+        cursor = LiquidacionesController.obtener_cursor()
+        consulta = f"""SELECT id, fecha, salario, horas_extra, bonificaciones, comisiones,
+            auxilios, porcentaje_salud, porcentaje_pension, impuestos, total_devengado, salario_neto
+            FROM public.liquidaciones WHERE id = {id}"""
+        cursor.execute(consulta)
+        fila = cursor.fetchone()
+        if fila is None:
+            return None
+        liquidacion = Liquidacion(
+            id=fila[0], fecha=fila[1], salario=fila[2],
+            horas_extra=fila[3], bonificaciones=fila[4],
+            comisiones=fila[5], auxilios=fila[6],
+            porcentaje_salud=fila[7], porcentaje_pension=fila[8],
+            impuestos=fila[9], total_devengado=fila[10],
             salario_neto=fila[11]
         )
         return liquidacion
