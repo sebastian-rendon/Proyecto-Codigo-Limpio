@@ -76,9 +76,13 @@ Copie el archivo `secret_config_sample.py` como `secret_config.py`
 y reemplace los valores con sus credenciales de PostgreSQL:
 
 PGHOST='su host aqui'
+
 PGDATABASE='su base de datos aqui'
+
 PGUSER='su usuario aqui'
+
 PGPASSWORD='su contraseña aqui'
+
 PGPORT=5432
 
 ⚠️ Nunca suba `secret_config.py` al repositorio.
