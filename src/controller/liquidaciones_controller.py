@@ -20,6 +20,16 @@ class LiquidacionesController:
         cursor.execute( sql )
         cursor.connection.commit()
 
+    def borrar_tabla():
+        cursor = LiquidacionesController.obtener_cursor()
+
+        #Lee el contenido del archivo y lo guarda en una variable sql
+        with open( "sql/borrar-liquidaciones.sql", "r") as archivo:
+            sql = archivo.read()
+
+        cursor.execute( sql )
+        cursor.connection.commit()
+
 
     def obtener_cursor():
         """ Crea un objeto cursor para poder ejecutar SQL en la BD """
