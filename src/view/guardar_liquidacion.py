@@ -29,5 +29,25 @@ try:
         liquidacion.auxilios
     ])
 
+    liquidacion_salario = LiquidacionSalario(
+        salario=liquidacion.salario,
+        horas_extra=liquidacion.horas_extra,
+        bonificaciones=liquidacion.bonificaciones,
+        comisiones=liquidacion.comisiones,
+        auxilios=liquidacion.auxilios,
+        salud=liquidacion.porcentaje_salud,
+        pension=liquidacion.porcentaje_pension,
+        impuesto_dinero=liquidacion.impuestos
+    )
+
+    liquidacion.salario_neto = calcular_salario(liquidacion_salario)
+
+    # Proceso: guadar la liquidacion en la BD
+    LiquidacionesController.insertar(liquidacion)
+
+
+    #Salida: Mostrar si fue exitoso
+    print("Liquidación realizada exitosamente!, id de la liquidacion: ", liquidacion.id)
+
 except Exception as e:
     print("Ocurrió un error al realizar la liquidación: ", str(e) )
