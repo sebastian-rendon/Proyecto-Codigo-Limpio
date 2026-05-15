@@ -7,6 +7,15 @@ from controller.liquidaciones_controller import LiquidacionesController
 
 class TestLiquidacion(unittest.TestCase):
 
+    #Test Fixture
+    @classmethod
+    def setUpClass(cls):
+        """ Jamas ejecute las pruebas unitarias en una DB de produccion
+        porque borra todos los datos
+        """
+        LiquidacionesController.borrar_tabla()
+        LiquidacionesController.crear_tabla()
+
     def test_insert_1(self):
         # Crear una liquidacion
         liquidacion = Liquidacion(
