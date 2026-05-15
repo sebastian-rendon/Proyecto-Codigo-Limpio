@@ -67,6 +67,40 @@ Antes de ejecutar la aplicación por primera vez, ejecute el script SQL para cre
 ```
 sql\crear-liquidaciones.sql
 ```
+---
+
+## Funcionalidades con base de datos
+
+- Guardar liquidaciones en PostgreSQL
+- Buscar liquidaciones por ID
+- Validar datos de entrada
+- Ejecutar pruebas automáticas
+
+---
+
+## Uso de funcionalidades
+
+### Guardar una liquidación
+
+Ejecute:
+
+```bash
+py src/view/guardar_liquidacion.py
+```
+
+El programa solicitará los datos de la liquidación, calculará automáticamente el total devengado y el salario neto, y guardará la información en PostgreSQL.
+
+---
+
+### Buscar una liquidación
+
+Ejecute:
+
+```bash
+py src/view/buscar_liquidacion.py
+```
+
+El programa solicitará el ID de la liquidación y mostrará la información almacenada en la base de datos.
 
 ---
 
@@ -112,7 +146,7 @@ import sys
 sys.path.append("src")
 ```
  
-### Ejecución de pruebas de base de datos
+## Ejecución de pruebas de base de datos
 
 Para ejecutar las pruebas de la base de datos, use:
 
