@@ -10,6 +10,17 @@ import secret_config
 
 class LiquidacionesController:
 
+    def crear_tabla():
+        cursor = LiquidacionesController.obtener_cursor()
+
+        #Lee el contenido del archivo y lo guarda en una variable sql
+        with open( "sql/crear-liquidaciones.sql", "r") as archivo:
+            sql = archivo.read()
+
+        cursor.execute( sql )
+        cursor.connection.commit()
+
+
     def obtener_cursor():
         """ Crea un objeto cursor para poder ejecutar SQL en la BD """
 
@@ -39,28 +50,6 @@ class LiquidacionesController:
         cursor.connection.commit()
 
 
-    def buscar_liquidacion(id: int) -> Liquidacion:
-        cursor = LiquidacionesController.obtener_cursor()
-        consulta = f"""SELECT id, fecha, salario, horas_extra, bonificaciones, comisiones,
-            auxilios, porcentaje_salud, porcentaje_pension, impuestos, total_devengado, salario_neto
-            FROM public.liquidaciones WHERE id = {id}"""
-        cursor.execute(consulta)
-        fila = cursor.fetchone()
-        liquidacion = Liquidacion(
-            id=fila[0],
-            fecha=fila[1],
-            salario=fila[2],
-            horas_extra=fila[3],
-            bonificaciones=fila[4],
-            comisiones=fila[5],
-            auxilios=fila[6],
-            porcentaje_salud=fila[7],
-            porcentaje_pension=fila[8],
-            impuestos=fila[9],
-            total_devengado=fila[10],
-            salario_neto=fila[11]
-        )
-        return liquidacion
     
     def buscar_liquidacion(id: int) -> Liquidacion:
         cursor = LiquidacionesController.obtener_cursor()
