@@ -183,8 +183,11 @@ py tests\test_liquidador_db.py
 
 Cada carpeta de código fuente contiene un archivo `__init__.py` que permite que Python reconozca la carpeta como un módulo y pueda realizar importaciones correctamente.
 
+
 ---
-###Estructuracion de carpetas
+### Estructuracion de carpetas
+
+```text
 PROYECTO-LIQUIDADOR-NOMINA/
 │
 ├── .github/
@@ -199,12 +202,12 @@ PROYECTO-LIQUIDADOR-NOMINA/
 │   ├── CASOS DE PRUEBA PROYECTO_1.xlsx
 │   └── Entrevista.m4a
 │
-├── sql/                         ← NUEVO
+├── sql/
 │   ├── crear-liquidaciones.sql
 │   └── borrar-liquidaciones.sql
 │
 ├── src/
-│   ├── controller/              ← NUEVO
+│   ├── controller/
 │   │   ├── __init__.py
 │   │   └── liquidaciones_controller.py
 │   │
@@ -212,7 +215,7 @@ PROYECTO-LIQUIDADOR-NOMINA/
 │   │   ├── __pycache__/
 │   │   ├── __init__.py
 │   │   ├── errores.py
-│   │   ├── liquidacion.py       ← NUEVO
+│   │   ├── liquidacion.py
 │   │   └── logica_liquidador.py
 │   │
 │   └── view/
@@ -227,15 +230,17 @@ PROYECTO-LIQUIDADOR-NOMINA/
 ├── tests/
 │   ├── __init__.py
 │   ├── test_liquidador_db.py
-│   └── test_liquidador.py    ← NUEVO
+│   └── test_liquidador.py
 │
 ├── .gitignore
 ├── buildozer.spec
 ├── main.py
 ├── main.spec
 ├── README.md
-├── secret_config.py             ← NUEVO (en .gitignore)
-└── secret_config_sample.py      ← NUEVO
+├── secret_config.py
+└── secret_config_sample.py
+```
+
 ---
 ## 📤 Entradas y salidas
  
