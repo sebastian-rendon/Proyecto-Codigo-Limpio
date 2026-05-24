@@ -5,6 +5,7 @@ from model import liquidacion
 from model.liquidacion import Liquidacion
 from controller.liquidaciones_controller import LiquidacionesController
 
+
 class TestLiquidacion(unittest.TestCase):
 
     #Test Fixture
