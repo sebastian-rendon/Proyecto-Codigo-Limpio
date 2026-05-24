@@ -153,6 +153,21 @@ Para ejecutar las pruebas de la base de datos, use:
 ```
 py tests\test_liquidador_db.py
 ```
+## Aplicación Web
+
+Esta aplicación requiere instalar `Flask`.
+
+Instale el paquete con:
+
+```
+pip install flask
+```
+Para ejecutar la aplicación localmente:
+```
+python app.py
+```
+Luego abra su navegador en `http://localhost:5000`
+
 ---
 ## Arquitectura
 
