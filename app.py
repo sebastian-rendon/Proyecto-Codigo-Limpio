@@ -16,5 +16,10 @@ def crear_tablas():
     LiquidacionesController.crear_tabla()
     return "Tablas creadas exitosamente"
 
+@app.route('/crear_liquidacion')
+def crear_liquidacion():
+    return render_template("crear_liquidacion.html")
+
+
 if __name__ == '__main__':
     app.run(debug=True)
