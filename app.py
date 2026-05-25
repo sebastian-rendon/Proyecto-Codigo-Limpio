@@ -13,10 +13,7 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route('/crear_tablas')
-def crear_tablas():
-    LiquidacionesController.crear_tabla()
-    return "Tablas creadas exitosamente"
+
 
 @app.route('/crear_liquidacion')
 def crear_liquidacion():
@@ -57,6 +54,17 @@ def guardar_liquidacion():
 @app.route('/buscar_liquidacion')
 def buscar_liquidacion():
     return render_template("buscar_liquidacion.html")
+
+@app.route('/resultado_busqueda')
+def resultado_busqueda():
+    id = int(request.args["id_buscado"])
+    liquidacion = LiquidacionesController.buscar_liquidacion(id)
+    return render_template("liquidacion_buscada.html", liquidacion=liquidacion)
+
+@app.route('/crear_tablas')
+def crear_tablas():
+    LiquidacionesController.crear_tabla()
+    return "Tablas creadas exitosamente"
 
 if __name__ == '__main__':
     app.run(debug=True)
