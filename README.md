@@ -153,6 +153,8 @@ Para ejecutar las pruebas de la base de datos, use:
 ```
 py tests\test_liquidador_db.py
 ```
+---
+
 ## Aplicación Web
 
 ### Prerrequisitos adicionales
@@ -185,6 +187,7 @@ Luego abra su navegador en:
 ```
 http://localhost:5000
 ```
+---
 
 ### Base de datos en blanco
 
@@ -200,28 +203,41 @@ Si es la primera vez que ejecuta la aplicación:
 
 ### Bibliotecas usadas
 - `unittest`: pruebas automatizadas (incluida en Python, no requiere instalación)
+- `flask`: framework web para Python
+- `psycopg2`: conector de PostgreSQL para Python
 
 ### Organización de módulos
 
 - **`docs/`**: Contenido de apoyo al proyecto. Contiene los casos de prueba en Excel y la entrevista con el experto.
 
-- **`src/`**: Código fuente de la aplicación, dividido en dos capas:
+- **`sql/`**: Scripts SQL para la base de datos.
+  - `crear-liquidaciones.sql`: Crea la tabla de liquidaciones.
+  - `borrar-liquidaciones.sql`: Elimina la tabla de liquidaciones.
+
+- **`src/`**: Código fuente de la aplicación, dividido en tres capas:
   - **`model/`**: Capa de lógica y datos.
     - `errores.py`: Define las excepciones personalizadas y las constantes del dominio.
     - `logica_liquidador.py`: Contiene la clase `LiquidacionSalario`, las validaciones y el cálculo del salario neto.
+    - `liquidacion.py`: Clase que representa una liquidación almacenada en la BD.
+  - **`controller/`**: Capa de acceso a datos.
+    - `liquidaciones_controller.py`: Operaciones de inserción, búsqueda y modificación en la BD.
   - **`view/`**: Capa de interacción con el usuario.
-    - `consola_liquidador.py`: Interfaz por consola que recibe los datos del usuario y muestra el resultado.
+    - `consola_liquidador.py`: Interfaz por consola.
+
+- **`templates/`**: Plantillas HTML para la interfaz web.
+  - `index.html`: Menú principal.
+  - `crear_liquidacion.html`: Formulario para insertar una liquidación.
+  - `liquidacion_guardada.html`: Confirmación de inserción.
+  - `buscar_liquidacion.html`: Formulario para buscar una liquidación.
+  - `liquidacion_buscada.html`: Resultado de la búsqueda.
+  - `modificar_liquidacion.html`: Formulario para modificar una liquidación.
+  - `modificacion_guardada.html`: Confirmación de modificación.
 
 - **`tests/`**: Pruebas unitarias de la aplicación.
   - `test_liquidador.py`: Casos de prueba para validaciones y cálculo del salario neto.
----
- - **`sql/`**: Scripts SQL para la base de datos.
-  - `crear-liquidaciones.sql`: Crea la tabla de liquidaciones.
-  - `borrar-liquidaciones.sql`: Elimina la tabla de liquidaciones.
-- **`src/controller/`**: Capa de acceso a datos.
-  - `liquidaciones_controller.py`: Operaciones de inserción y consulta en la BD.
-- **`src/model/`**:
-  - `liquidacion.py`: Clase que representa una liquidación almacenada en la BD.
+  - `test_liquidador_db.py`: Casos de prueba para la base de datos.
+
+- **`app.py`**: Punto de entrada de la aplicación web Flask.
 
 Cada carpeta de código fuente contiene un archivo `__init__.py` que permite que Python reconozca la carpeta como un módulo y pueda realizar importaciones correctamente.
 
