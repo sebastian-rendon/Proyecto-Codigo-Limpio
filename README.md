@@ -179,11 +179,21 @@ Desde la raíz del proyecto ejecute:
 ```
 python app.py
 ```
+
 Luego abra su navegador en:
 
 ```
 http://localhost:5000
+```
 
+### Base de datos en blanco
+
+Si es la primera vez que ejecuta la aplicación:
+
+1. Configure sus credenciales en secret_config.py
+2. Ejecute la aplicación con python app.py
+3. En el menú haga click en *"Crear tablas en la base de datos"*
+4. Ya puede insertar, buscar y modificar liquidaciones
 
 ---
 ## Arquitectura
