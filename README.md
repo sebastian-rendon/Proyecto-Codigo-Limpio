@@ -244,31 +244,39 @@ PROYECTO-LIQUIDADOR-NOMINA/
 │   │   └── liquidaciones_controller.py
 │   │
 │   ├── model/
-│   │   ├── __pycache__/
 │   │   ├── __init__.py
 │   │   ├── errores.py
 │   │   ├── liquidacion.py
 │   │   └── logica_liquidador.py
 │   │
 │   └── view/
-│       ├── __pycache__/
 │       ├── gui/
-│       │   ├── __pycache__/
 │       │   ├── __init__.py
 │       │   └── My_App.py
 │       ├── __init__.py
 │       └── consola_liquidador.py
 │
+├── templates/
+│   ├── index.html
+│   ├── crear_liquidacion.html
+│   ├── liquidacion_guardada.html
+│   ├── buscar_liquidacion.html
+│   ├── liquidacion_buscada.html
+│   ├── modificar_liquidacion.html
+│   └── modificacion_guardada.html
+│
 ├── tests/
 │   ├── __init__.py
-│   ├── test_liquidador_db.py
-│   └── test_liquidador.py
+│   ├── test_liquidador.py
+│   └── test_liquidador_db.py
 │
 ├── .gitignore
+├── app.py
 ├── buildozer.spec
 ├── main.py
 ├── main.spec
 ├── README.md
+├── requirements.txt
 ├── secret_config.py
 └── secret_config_sample.py
 ```
