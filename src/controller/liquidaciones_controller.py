@@ -80,3 +80,20 @@ class LiquidacionesController:
         )
         return liquidacion
     
+    def actualizar(liquidacion: Liquidacion):
+        cursor = LiquidacionesController.obtener_cursor()
+        consulta = f"""UPDATE liquidaciones SET
+            salario = {liquidacion.salario},
+            horas_extra = {liquidacion.horas_extra},
+            bonificaciones = {liquidacion.bonificaciones},
+            comisiones = {liquidacion.comisiones},
+            auxilios = {liquidacion.auxilios},
+            porcentaje_salud = {liquidacion.porcentaje_salud},
+            porcentaje_pension = {liquidacion.porcentaje_pension},
+            impuestos = {liquidacion.impuestos},
+            total_devengado = {liquidacion.total_devengado},
+            salario_neto = {liquidacion.salario_neto}
+            WHERE id = {liquidacion.id}"""
+        cursor.execute(consulta)
+        cursor.connection.commit()
+    

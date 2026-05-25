@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modificar Liquidación</title>
+</head>
+<body>
+    <h1>Modificar una Liquidación</h1>
+
+    <form action="/guardar_modificacion">
+        <table>
+            <tr>
+                <td>ID de la liquidación</td>
+                <td><input type="number" name="id" /></td>
+            </tr>
+            <tr>
+                <td>Salario</td>
+                <td><input type="number" name="salario" /></td>
+            </tr>
+            <tr>
+                <td>Horas Extra</td>
+                <td><input type="number" name="horas_extra" /></td>
+            </tr>
+            <tr>
+                <td>Bonificaciones</td>
+                <td><input type="number" name="bonificaciones" /></td>
+            </tr>
+            <tr>
+                <td>Comisiones</td>
+                <td><input type="number" name="comisiones" /></td>
+            </tr>
+            <tr>
+                <td>Auxilios</td>
+                <td><input type="number" name="auxilios" /></td>
+            </tr>
+            <tr>
+                <td>Salud (%)</td>
+                <td><input type="number" name="porcentaje_salud" /></td>
+            </tr>
+            <tr>
+                <td>Pensión (%)</td>
+                <td><input type="number" name="porcentaje_pension" /></td>
+            </tr>
+            <tr>
+                <td>Impuestos</td>
+                <td><input type="number" name="impuestos" /></td>
+            </tr>
+        </table>
+        <input type="submit" value="Modificar" />
+    </form>
+
+    <p><a href="/">Volver al menú</a></p>
+
+</body>
+</html>
