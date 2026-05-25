@@ -54,6 +54,9 @@ def guardar_liquidacion():
     LiquidacionesController.insertar(liquidacion)
     return render_template("liquidacion_guardada.html", liquidacion=liquidacion)
 
+@app.route('/buscar_liquidacion')
+def buscar_liquidacion():
+    return render_template("buscar_liquidacion.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
