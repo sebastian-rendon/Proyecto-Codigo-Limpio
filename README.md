@@ -155,18 +155,23 @@ py tests\test_liquidador_db.py
 ```
 ## Aplicación Web
 
+### Prerrequisitos adicionales
+
+
 Esta aplicación requiere instalar `Flask`.
 
-Instale el paquete con:
+
+Instale Flask con:
 
 ```
 pip install flask
 ```
-Para ejecutar la aplicación localmente:
+
+O instale todas las dependencias con:
+
 ```
-python app.py
+pip install -r requirements.txt
 ```
-Luego abra su navegador en `http://localhost:5000`
 
 ---
 ## Arquitectura
