@@ -172,6 +172,18 @@ O instale todas las dependencias con:
 ```
 pip install -r requirements.txt
 ```
+### Ejecución local
+
+Desde la raíz del proyecto ejecute:
+
+```
+python app.py
+```
+Luego abra su navegador en:
+
+```
+http://localhost:5000
+
 
 ---
 ## Arquitectura
