@@ -109,17 +109,15 @@ El programa solicitará el ID de la liquidación y mostrará la información alm
 Copie el archivo `secret_config_sample.py` como `secret_config.py` 
 y reemplace los valores con sus credenciales de PostgreSQL:
 
+```python
 PGHOST='su host aqui'
-
 PGDATABASE='su base de datos aqui'
-
 PGUSER='su usuario aqui'
-
 PGPASSWORD='su contraseña aqui'
-
 PGPORT=5432
+```
 
-⚠️ Nunca suba `secret_config.py` al repositorio.
+Nunca suba `secret_config.py` al repositorio.
 ---
 ### Ejecución del programa con base de datos
  
