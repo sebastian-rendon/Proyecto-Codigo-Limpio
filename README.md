@@ -369,7 +369,7 @@ Ideal para entornos de desarrollo y depuración rápida de la lógica de negocio
 * **Prerrequisito:** Python 3.8 o superior instalado en el sistema.
 * **Comando de ejecución:**
   ```bash
-  python src/view/consola_liquidador.py
+  python src/view/console/consola_liquidador.py
 
 ---
 
