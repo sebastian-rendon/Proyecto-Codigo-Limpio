@@ -85,7 +85,7 @@ sql\crear-liquidaciones.sql
 Ejecute:
 
 ```bash
-py src/view/guardar_liquidacion.py
+py src/view/console/guardar_liquidacion.py
 ```
 
 El programa solicitará los datos de la liquidación, calculará automáticamente el total devengado y el salario neto, y guardará la información en PostgreSQL.
@@ -97,7 +97,7 @@ El programa solicitará los datos de la liquidación, calculará automáticament
 Ejecute:
 
 ```bash
-py src/view/buscar_liquidacion.py
+py src/view/console/buscar_liquidacion.py
 ```
 
 El programa solicitará el ID de la liquidación y mostrará la información almacenada en la base de datos.
@@ -124,7 +124,7 @@ Nunca suba `secret_config.py` al repositorio.
 Ubicados en la carpeta raíz del proyecto, ejecute:
  
 ```
-py src/view/consola_liquidador.py
+py src/view/console/consola_liquidador.py
 ```
 
 ---
