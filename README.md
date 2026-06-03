@@ -220,7 +220,14 @@ Si es la primera vez que ejecuta la aplicación:
   - **`controller/`**: Capa de acceso a datos.
     - `liquidaciones_controller.py`: Operaciones de inserción, búsqueda y modificación en la BD.
   - **`view/`**: Capa de interacción con el usuario.
-    - `consola_liquidador.py`: Interfaz por consola.
+    - **`console/`**: Interfaz por consola.
+      - `consola_liquidador.py`: Interfaz por consola que recibe los datos del usuario y muestra el resultado.
+      - `buscar_liquidacion.py`: Búsqueda de liquidaciones por consola.
+      - `guardar_liquidacion.py`: Guardado de liquidaciones por consola.
+    - **`web/`**: Interfaz web (Blueprint de Flask).
+      - `vista_liquidaciones.py`: Rutas y lógica de presentación web.
+    - **`gui/`**: Interfaz gráfica.
+      - `My_App.py`: Aplicación gráfica.
 
 - **`templates/`**: Plantillas HTML para la interfaz web.
   - `index.html`: Menú principal.
@@ -236,6 +243,7 @@ Si es la primera vez que ejecuta la aplicación:
   - `test_liquidador_db.py`: Casos de prueba para la base de datos.
 
 - **`app.py`**: Punto de entrada de la aplicación web Flask.
+
 
 Cada carpeta de código fuente contiene un archivo `__init__.py` que permite que Python reconozca la carpeta como un módulo y pueda realizar importaciones correctamente.
 
