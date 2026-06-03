@@ -197,6 +197,41 @@ Si es la primera vez que ejecuta la aplicación:
 4. Ya puede insertar, buscar y modificar liquidaciones
 
 ---
+
+## Despliegue en Render.com
+
+Para desplegar la aplicación Flask en Render.com, tenga en cuenta lo siguiente:
+
+1. Asegúrese de tener el archivo `requirements.txt` en la raíz del proyecto con:
+
+```bash
+flask
+psycopg2
+```
+
+2. El **Build Command** de la aplicación es:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. El **Start Command** de la aplicación es:
+
+```bash
+flask run -p 10000 -h 0.0.0.0
+```
+
+4. Para los parámetros de conexión a la base de datos, ingrese al menú **Environment → Secret Files** y cree un nuevo Secret File llamado `secret_config.py` con las variables de conexión de su base de datos.
+
+---
+
+## Aplicación publicada
+
+La aplicación está disponible en:
+
+https://proyecto-liquidador-nomina.onrender.com
+
+---
 ## Arquitectura
 
 ### Bibliotecas usadas
