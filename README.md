@@ -273,12 +273,19 @@ PROYECTO-LIQUIDADOR-NOMINA/
 │   │   ├── liquidacion.py
 │   │   └── logica_liquidador.py
 │   │
-│   └── view/
-│       ├── gui/
-│       │   ├── __init__.py
-│       │   └── My_App.py
-│       ├── __init__.py
-│       └── consola_liquidador.py
+│   ├── view/
+│   ├── console/
+│   │   ├── __init__.py
+│   │   ├── buscar_liquidacion.py
+│   │   ├── consola_liquidador.py
+│   │   └── guardar_liquidacion.py
+│   ├── gui/
+│   │   ├── __init__.py
+│   │   └── My_App.py
+│   ├── web/
+│   │   ├── __init__.py
+│   │   └── vista_liquidaciones.py
+│   └── __init__.py
 │
 ├── templates/
 │   ├── index.html
